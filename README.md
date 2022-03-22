@@ -53,11 +53,11 @@ Luego dentro del archivo que se creo. escribimos el siguiente codigo para condig
 	}
 <i><b>Explicación del código.</b></i>
 <p>
-1. path es un recurso de node.
-2. En entry se especifica la ruta de la raiz de nuestro proyecto.
-3. en path.resove(__dirname, 'dist') le podemos camvbiar el nombre a la camperta donde se almacenará nuestro codigo despues de ser compilado. Lo recomendable es dejarlo en dist.
-4. filename indica el nombre en el que se va a guardar el codigo despues de ser compilado por webpack. En este caso le pusimos main.js
-5. En extensions le tenemos que especificar las extenciones que estamos utilizando en nuestro proyecto.
+1. path es un recurso de node. <br>
+2. En entry se especifica la ruta de la raiz de nuestro proyecto.<br>
+3. en path.resove(__dirname, 'dist') le podemos camvbiar el nombre a la camperta donde se almacenará nuestro codigo despues de ser compilado. Lo recomendable es dejarlo en dist.<br>
+4. filename indica el nombre en el que se va a guardar el codigo despues de ser compilado por webpack. En este caso le pusimos main.js<br>
+5. En extensions le tenemos que especificar las extenciones que estamos utilizando en nuestro proyecto.<br>
 </p>
 <b>Guardar las configuraciones.</b>
 <p>
