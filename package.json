@@ -1,0 +1,23 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Empezando el curso de Webpack con platzi",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoRamir3zz/webpack.git"
+  },
+  "author": "Juan Ramirez <juanchoramirez2001@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegoRamir3zz/webpack/issues"
+  },
+  "homepage": "https://github.com/diegoRamir3zz/webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
