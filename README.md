@@ -67,3 +67,59 @@ Por ultimo corremos en la consola el siguiente comando.
 
 Estas son algunas configuraciones basicas que le hacemos a nuestro webpack
 </p>
+
+<h2>Configurar Babel</h2>
+<p>
+Inicialmente instalamos las dependecias que necesitamos, para eso corremos el siguiente comando en nuestra termianl.
+
+<i><b>npm install babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime -D</b></i>
+
+1. <i>babel-loader</i> nos permite usar babel con webpack <br>
+2. <i>@babel/core</i> es babel en general<br>
+3. <i>@babel/preset-env </i> permite usar las ultimas características de JavaScript<br>
+4. <i>@babel/plugin-transform-runtime</i> te permite trabajar con todo el tema de asincronismo como async y await<br>
+
+Ahora crearemos un archivo de configuracion de babel en la raiz de todo nuestro poryecto, el archivo debe llamarse .babelrc y escribimos el siguiente codigo en el.
+</p>
+
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ]
+}
+<p>
+Tambien debemos realizar algunas configuraciones en nuestro archivo <i><b>webpack.config.js</b></i>
+
+Todo nuestro codigo debe quedar de esta manera. (Incluyendo el codigo previo que habiamos escrito)
+</p>
+
+const path = require( 'path' );
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+  },
+  resolve: {
+    extensions: ['.js']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+}
+<p>
+Asi le estamos indicando a webpack que queremos hacer uso de babel.
+<a hreft="https://platzi.com/blog/que-es-babel/?utm_source=google&utm_medium=cpc&utm_campaign=12915366154&utm_adgroup=&utm_content=&gclid=Cj0KCQjw5-WRBhCKARIsAAId9FmhXFA6fobPhQXLjC8yfP0PrPQ-xV1dcxUPh81l7wJNwyOzp1MigBEaAuqZEALw_wcB&gclsrc=aw.ds ">Saber más</a>
+</p>
